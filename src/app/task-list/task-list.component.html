@@ -1,0 +1,26 @@
+<div
+  class="list-group-item flex-column align-items-start"
+  [ngClass]="{
+    'list-group-item-danger': item.done
+  }"
+>
+
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{item.task}}</h5>
+    <div>
+      <button
+        [disabled]="item.done"
+        type="button"
+        class="btn btn-outline-success"
+
+      >Done</button>
+      <button type="button" class="btn btn-outline-danger">Delete</button>
+    </div>
+  </div>
+
+  <div class="d-flex w-100 justify-content-between">
+  <p class="mb-1">{{item.description}}</p>
+  <small>{{item.date}}</small>
+  </div>
+
+</div>
