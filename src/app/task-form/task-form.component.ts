@@ -34,6 +34,16 @@ export class TaskFormComponent implements OnInit {
       this.id
     )
 
+    const taskObj = {
+      "task": this.taskEnter,
+      "description": this.description,
+      "date": moment().format('DD.MM.YY'),
+      "done": false
+    }
+
+    const serialObj = JSON.stringify(taskObj)
+    localStorage.setItem(this.id.toString(), serialObj)
+
     this.addTask.emit(task)
     this.taskEnter = ''
 
