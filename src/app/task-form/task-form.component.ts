@@ -38,5 +38,4 @@ export class TaskFormComponent implements OnInit {
     this.taskEnter = ''
 
   }
-
 }

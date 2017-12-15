@@ -6,6 +6,7 @@
 
   <div class="list-group">
     <app-task-list
+      (deleteTask)="onDelete($event)"
       [item] = "i"
       *ngFor="let i of items"
     ></app-task-list>

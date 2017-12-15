@@ -9,12 +9,16 @@
     <h5 class="mb-1">{{item.task}}</h5>
     <div>
       <button
+        (click)="oneDone()"
         [disabled]="item.done"
         type="button"
         class="btn btn-outline-success"
-
       >Done</button>
-      <button type="button" class="btn btn-outline-danger">Delete</button>
+      <button
+        (click)="oneDelete()"
+        type="button"
+        class="btn btn-outline-danger"
+      >Delete</button>
     </div>
   </div>
 
