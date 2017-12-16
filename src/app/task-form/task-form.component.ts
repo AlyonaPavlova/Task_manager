@@ -19,10 +19,11 @@ export class TaskFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    for (var i = 1; i <= localStorage.length; i++) {
-      const jsonObj = localStorage.getItem(i.toString())
+    for (var i = 0; i < localStorage.length; i++) {
+      const jsonObj = localStorage.getItem(localStorage.key(i))
       const newTask = JSON.parse(jsonObj)
       this.addTask.emit(newTask)
+      this.id = +localStorage.key(i)
     }
   }
 
