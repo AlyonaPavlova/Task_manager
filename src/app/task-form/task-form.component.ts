@@ -9,7 +9,7 @@ import * as moment from 'moment'
 })
 export class TaskFormComponent implements OnInit {
 
-  private id: number = 2
+  private id: number = 0
   private description = ''
 
   taskEnter: string = ''
@@ -19,6 +19,11 @@ export class TaskFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    for (var i = 1; i <= localStorage.length; i++) {
+      const jsonObj = localStorage.getItem(i.toString())
+      const newTask = JSON.parse(jsonObj)
+      this.addTask.emit(newTask)
+    }
   }
 
   onAdd() {
@@ -34,14 +39,7 @@ export class TaskFormComponent implements OnInit {
       this.id
     )
 
-    const taskObj = {
-      "task": this.taskEnter,
-      "description": this.description,
-      "date": moment().format('DD.MM.YY'),
-      "done": false
-    }
-
-    const serialObj = JSON.stringify(taskObj)
+    const serialObj = JSON.stringify(task)
     localStorage.setItem(this.id.toString(), serialObj)
 
     this.addTask.emit(task)
