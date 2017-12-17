@@ -4,7 +4,7 @@ export class Item {
     public description: string,
     public date: string,
     public done: boolean = false,
-    public id?: number
+    public id: number
   ) {}
 }
 

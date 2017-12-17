@@ -1,29 +1,7 @@
 <div class="form-group" onload="onStart()">
 
   <label for="task-input">DO IT - Your personal task manager</label>
-
-    <form class="bd-search hidden-sm-down search">
-      <input
-             [(ngModel)]="filter"
-             name="search"
-             type="text"
-             class="form-control"
-             id="search-input"
-             placeholder="Search..."
-             autocomplete="off">
-
-      <div class="dropdown-menu bd-search-results"
-           id="search-results">
-        <ul *ngFor="let i of items | filter:filter">
-          <li>{{i}}</li>
-          <li>{{item.task}}</li>
-          <li>{{item.description}}</li>
-        </ul>
-      </div>
-    </form>
-
   <div>
-
     <input
       type="text"
       class="form-control"
@@ -35,9 +13,7 @@
       (click)="onAdd()"
       class="btn btn-success"
     >Add</button>
-
-</div>
-
+  </div>
 </div>
 
 

@@ -12,6 +12,7 @@ export class TaskFormComponent implements OnInit {
   private id: number = 0
   private description = ''
 
+  filter: string = ''
   taskEnter: string = ''
 
   @Output() addTask = new EventEmitter<Item>()
@@ -45,6 +46,5 @@ export class TaskFormComponent implements OnInit {
 
     this.addTask.emit(task)
     this.taskEnter = ''
-
   }
 }

@@ -8,9 +8,9 @@ import { Item } from "./task.model";
 })
 
 export class AppComponent {
-    public items: Item[]=[]
-  //   new Item ('Make buy', 'Tomatoes, cheese, milk', '10.12.17', false, 1),
-  //   new Item ('Fix the door', 'Do not forget to buy a new lock', '11.12.17', false, 2)
+
+  public items: Item[]=[]
+  public filterAddTask = '';
 
   onAdd(item: Item) {
     this.items.push(item)

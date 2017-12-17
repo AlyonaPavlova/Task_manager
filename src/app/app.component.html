@@ -4,13 +4,25 @@
     (addTask)="onAdd($event)"
   ></app-task-form>
 
+  <form class="bd-search hidden-sm-down search">
+    <input
+      [(ngModel)]="filterAddTask"
+      name="search"
+      type="text"
+      class="form-control"
+      id="search-input"
+      placeholder="Search..."
+      autocomplete="off">
+  </form>
+
   <div class="list-group">
     <app-task-list
       (deleteTask)="onDelete($event)"
       [item] = "i"
-      *ngFor="let i of items"
+      *ngFor="let i of items  | filter:filterAddTask"
     ></app-task-list>
 
   </div>
-
 </div>
+
+
