@@ -10,6 +10,7 @@
 #search-input {
   float: right;
   position: relative;
+  font-style: italic;
 }
 
 thead {
@@ -19,6 +20,10 @@ thead {
 
 thead > tr > th {
   cursor: pointer;
+}
+
+#label {
+  font-size: x-large;
 }
 
 
