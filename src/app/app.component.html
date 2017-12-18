@@ -1,5 +1,6 @@
 <div class="container" onload="onStart()">
   <label class="font-weight-bold">DO IT - Your personal task manager</label>
+
   <input
     [(ngModel)]="filterAddTask"
     name="search"
@@ -17,9 +18,30 @@
     <app-task-list
       (deleteTask)="onDelete($event)"
       [item] = "i"
-      *ngFor="let i of items  | filter:filterAddTask"
+      *ngFor="let i of items| orderBy: key: reverse | filter:filterAddTask"
     ></app-task-list>
   </div>
+
+  <span class="todo-count">The tasks remain: <strong>{{items.length}}</strong></span>
+
+  <thead>
+    <tr class="list-filter">
+      <th>#</th>
+      <th (click)="sort('task')">Task |
+      <span class="glyphicon sort-icon" *ngIf="key =='task'"
+          [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+      <th (click)="sort('done')">Done |
+      <span class="glyphicon sort-icon" *ngIf="key =='done'"
+            [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+      <th (click)="sort('description')">Description |
+      <span class="glyphicon sort-icon" *ngIf="key =='description'"
+            [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+      <th (click)="sort('date')">Date |
+      <span class="glyphicon sort-icon" *ngIf="key =='date'"
+            [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+    </tr>
+  </thead>
 </div>
+
 
 

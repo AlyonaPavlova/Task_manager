@@ -1,6 +1,5 @@
 .container {
   padding-top: 50px;
-
 }
 
 .list-group {
@@ -8,10 +7,18 @@
   margin-top: 80px;
 }
 
-
 #search-input {
   float: right;
   position: relative;
+}
+
+thead {
+  float: right;
+  display: inline-block;
+}
+
+thead > tr > th {
+  cursor: pointer;
 }
 
 

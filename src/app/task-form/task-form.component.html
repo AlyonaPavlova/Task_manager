@@ -8,8 +8,9 @@
 
     <input
       type="text"
-      class="form-control col-lg-11 pull-0"
+      class="form-control col-md-11"
       id="task-input"
+      (keyup.enter)="onAdd()"
       [(ngModel)]="taskEnter"
       placeholder="Enter a task">
 </div>
