@@ -1,19 +1,17 @@
 <div class="container" onload="onStart()">
+  <label class="font-weight-bold">DO IT - Your personal task manager</label>
+  <input
+    [(ngModel)]="filterAddTask"
+    name="search"
+    type="text"
+    class="form-control col-md-3"
+    id="search-input"
+    placeholder="Search..."
+    autocomplete="off">
 
   <app-task-form
     (addTask)="onAdd($event)"
   ></app-task-form>
-
-  <form class="bd-search hidden-sm-down search">
-    <input
-      [(ngModel)]="filterAddTask"
-      name="search"
-      type="text"
-      class="form-control"
-      id="search-input"
-      placeholder="Search..."
-      autocomplete="off">
-  </form>
 
   <div class="list-group">
     <app-task-list
@@ -21,7 +19,6 @@
       [item] = "i"
       *ngFor="let i of items  | filter:filterAddTask"
     ></app-task-list>
-
   </div>
 </div>
 

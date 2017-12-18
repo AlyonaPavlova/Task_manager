@@ -1,19 +1,15 @@
 <div class="form-group" onload="onStart()">
-
-  <label for="task-input">DO IT - Your personal task manager</label>
-  <div>
-    <input
-      type="text"
-      class="form-control"
-      id="task-input"
-      [(ngModel)]="taskEnter"
-      placeholder="Enter a task">
-    <button
+      <button
       type="button"
       (click)="onAdd()"
       class="btn btn-success"
-    >Add</button>
-  </div>
+      id="button-add"
+      >Add</button>
+
+    <input
+      type="text"
+      class="form-control col-lg-11 pull-0"
+      id="task-input"
+      [(ngModel)]="taskEnter"
+      placeholder="Enter a task">
 </div>
-
-

@@ -1,12 +1,9 @@
-.bd-search .form-control {
-  width: 200px;
-}
-
-.search {
-  float: right;
-  padding-bottom: 20px;
-}
-
 #task-input {
- margin-bottom: 10px;
+  display: inherit;
+  float: right;
+}
+
+#button-add {
+  width: 90px;
+  position: absolute;
 }

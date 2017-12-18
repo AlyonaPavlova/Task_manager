@@ -1,3 +1,17 @@
 .container {
   padding-top: 50px;
+
 }
+
+.list-group {
+  display:inherit;
+  margin-top: 80px;
+}
+
+
+#search-input {
+  float: right;
+  position: relative;
+}
+
+
