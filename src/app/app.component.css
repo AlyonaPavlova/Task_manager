@@ -11,6 +11,11 @@
   float: right;
   position: relative;
   font-style: italic;
+  padding-left: 30px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Search_font_awesome.svg/1000px-Search_font_awesome.svg.png);
+  background-repeat: no-repeat;
+  background-position: 4px;
+  background-size: 17px;
 }
 
 thead {
@@ -25,5 +30,6 @@ thead > tr > th {
 #label {
   font-size: x-large;
 }
+
 
 
